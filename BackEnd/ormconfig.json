@@ -1,0 +1,21 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "docker",
+    "database": "SmartKart",
+    "entities" : [
+        "./src/models/*.ts"
+    ],
+    "synchronize": false,
+    "dropSchema": false,
+    "migrationsRun": true,
+    "logging": "all",
+    "migrations": [
+        "./src/database/migrations/*.ts"
+    ],
+    "cli": {
+        "migrationsDir" : "./src/database/migrations"
+    }
+}
