@@ -24,4 +24,15 @@ export const Card = styled.form`
         box-sizing: border-box;
         width: 100%;
     }
+
+    > button {
+        margin: auto auto;
+        padding: 7px 15px;
+        border: 3px solid greenyellow;
+        border-radius: 12px;
+        background-color: violet;
+        &:hover {
+            opacity:0.6;
+        }
+    }
 `;
