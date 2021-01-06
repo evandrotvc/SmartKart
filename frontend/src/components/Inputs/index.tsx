@@ -17,19 +17,14 @@ const Input: React.FC<InputProps> = ({name ,ContentState: [State , setState],ico
 
     const HandleInputBlur = useCallback(() => {
         setIsFocused(false);
-        console.log("a" , !!State)
+
         setIsFilled(!!State)
         },[State])
 
     const HandleInputFocus = useCallback(() => {
         setIsFocused(true);
       }, []);
-
-      const HandleContentInput = useCallback((e) => {
-
-        setState(e.target.value)
-        console.log("cont" , State);
-      }, [State, setState]);
+      
 
     return (
         <Container isFilled = {IsFilled} IsFocused = {IsFocused}>
@@ -37,7 +32,7 @@ const Input: React.FC<InputProps> = ({name ,ContentState: [State , setState],ico
             <input
             onFocus = {HandleInputFocus}
             onBlur = {HandleInputBlur}
-            onChange = {( e : any) =>  HandleContentInput(e)}
+            onChange = {( e) =>  setState(e.target.value)}
             placeholder = {name}
             {...rest}
             />            

@@ -1,38 +1,35 @@
 import styled from 'styled-components';
 
 export const Container = styled.div `
- width: 100vw;
- height: 100vh;
+    display:flex;
+    width: 100vw;
+    height: 100vh;
+    margin: auto auto;
+    justify-content:center;
  
 `;
-export const Card = styled.form`
-    border: 3px solid violet;
+export const Card = styled.div`    
+    border: 2px solid #ADFF2F;
     border-radius:12px;
     padding: 10px 15px;
-    width: 40vw;
-    height: 50vh;
-    margin: auto auto;
-
-    > label{
-        display: block;
-    }
-
-    > input , textarea{
-        padding: 5px 10px;
-        display: block;
-        margin-bottom: 10px;
-        box-sizing: border-box;
+    width: 40%;
+    height: 75%;
+    margin: auto 0;
+      
+    img {
         width: 100%;
+        height: 100%;
     }
-
-    > button {
-        margin: auto auto;
+    
+    button {
+        display:flex;
+        margin: 30px auto 0 auto;
         padding: 7px 15px;
-        border: 3px solid greenyellow;
+        border: 3px solid rgb(32, 32, 36);
         border-radius: 12px;
-        background-color: violet;
+        background-color: #ff9000;
         &:hover {
-            opacity:0.6;
+            opacity:0.8;
         }
-    }
+    }   
 `;

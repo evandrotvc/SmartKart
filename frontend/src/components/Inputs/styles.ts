@@ -11,7 +11,7 @@ export const Container = styled.div<ContainerProps>`
     padding: 16px;
     width: 100%;
     color: white;
-
+    margin: 15px 0;
 
     display: flex;
     align-items: center;
@@ -48,4 +48,6 @@ export const Container = styled.div<ContainerProps>`
     svg {
         margin-right: 15px;
     }
+
+    
 `; 

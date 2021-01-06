@@ -3,9 +3,12 @@
 
 import { Router } from 'express';
 import usersRouter from './user.routes';
+import productsRouter from './product.routes';
 
 const routes = Router();
 
 routes.use('/users', usersRouter);
+
+routes.use('/products', productsRouter);
 
 export default routes;
