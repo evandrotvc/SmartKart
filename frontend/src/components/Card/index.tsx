@@ -1,32 +1,34 @@
-import React from 'react';
+import React , {useState} from 'react';
 import {Container} from './styles';
-import image from '../../assets/mouseDark.png'
-const Card: React.FC = () => {
+import {FaCartPlus} from 'react-icons/fa';
+
+interface PropsCard {
+    name: string;
+    image: string;
+    price: number;
+}
+
+const Card: React.FC<PropsCard> = ({image, name, price}) => {
+    const [IsClicked , setIsClicked ] = useState(false);
     return (
         <>
-        <Container image = {image}>
-            <div>
-                <span>Starting from</span>
-                <strong>$50</strong>
+        <Container image = {image} isClicked= {IsClicked}>
+            <div className= "card-info">
+                <h1>{name}</h1>
+                
+                <strong>${price}</strong>
 
-                <h2>Mouse</h2>
+                
+                <div className= "container-button">
+                    <button onClick= {() => setIsClicked(true)}>{<FaCartPlus size= {15} color= {"white"}/>}</button>
+                    <span>ADD TO CART</span>
+                </div>
             </div>
 
-            {/* <img src= {image} alt = "img"></img> */}
-            <div className = "teste"></div>            
+            <div className = "image"></div>    
+                  
         </Container>
-
-        <Container image = {"https://img.terabyteshop.com.br/produto/g/headset-gamer-marvo-scorpion-hg8928-pretovermelho_84626.png"}>
-        <div>
-            <span>Starting from</span>
-            <strong>$50</strong>
-
-            <h2>Mouse</h2>
-        </div>
-
-        {/* <img src= {image} alt = "img"></img> */}
-        <div className = "image"></div>            
-        </Container>
+       
         </>
     );
 }
